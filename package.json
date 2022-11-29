@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "client": "npm start --prefix client",
-    "server-ts": "npm run ts-watch --prefix server",
+    "server-ts-build": "npm run ts-build --prefix server",
+    "server-ts-watch": "npm run ts-watch --prefix server",
     "server": "npm run server-watch --prefix server",
-    "start": "concurrently --kill-others --names \"Server-TS,Server,Client\" -c \"bgMagenta.bold,bgMagenta.bold,bgGreen.bold\" npm:server-ts npm:server npm:client"
+    "start-all": "concurrently --kill-others --names \"Server-TS,Server,Client\" -c \"bgMagenta.bold,bgMagenta.bold,bgGreen.bold\" npm:server-ts-watch npm:server npm:client",
+    "start": "npm run server-ts-build && npm run start-all"
   },
   "author": "BenManage",
   "license": "UNLICENSED",
