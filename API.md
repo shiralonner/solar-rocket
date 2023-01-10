@@ -1,14 +1,9 @@
 ---
 title: Solar Rocket Fuel API v1.0.0
 language_tabs:
-  - shell: Shell
   - http: HTTP
   - javascript: JavaScript
-  - ruby: Ruby
-  - python: Python
-  - php: PHP
-  - java: Java
-  - go: Go
+  - javascript--node: Node.JS
 toc_footers: []
 includes: []
 search: true
@@ -43,15 +38,6 @@ Base URLs:
 
 > Code samples
 
-```shell
-# You can also use wget
-curl -X GET https://solar-rocket-fuel.benmanage.click/deliveries?startDate=string&numberOfDays=0 \
-  -H 'Accept: application/json' \
-  -H 'UserID: API_KEY' \
-  -H 'ApiKey: API_KEY'
-
-```
-
 ```http
 GET https://solar-rocket-fuel.benmanage.click/deliveries?startDate=string&numberOfDays=0 HTTP/1.1
 Host: solar-rocket-fuel.benmanage.click
@@ -78,119 +64,6 @@ fetch('https://solar-rocket-fuel.benmanage.click/deliveries?startDate=string&num
 }).then(function(body) {
     console.log(body);
 });
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Accept' => 'application/json',
-  'UserID' => 'API_KEY',
-  'ApiKey' => 'API_KEY'
-}
-
-result = RestClient.get 'https://solar-rocket-fuel.benmanage.click/deliveries',
-  params: {
-  'startDate' => 'string',
-'numberOfDays' => 'integer'
-}, headers: headers
-
-p JSON.parse(result)
-
-```
-
-```python
-import requests
-headers = {
-  'Accept': 'application/json',
-  'UserID': 'API_KEY',
-  'ApiKey': 'API_KEY'
-}
-
-r = requests.get('https://solar-rocket-fuel.benmanage.click/deliveries', params={
-  'startDate': 'string',  'numberOfDays': '0'
-}, headers = headers)
-
-print(r.json())
-
-```
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Accept' => 'application/json',
-    'UserID' => 'API_KEY',
-    'ApiKey' => 'API_KEY',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('GET','https://solar-rocket-fuel.benmanage.click/deliveries', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```java
-URL obj = new URL("https://solar-rocket-fuel.benmanage.click/deliveries?startDate=string&numberOfDays=0");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-
-```
-
-```go
-package main
-
-import (
-       "bytes"
-       "net/http"
-)
-
-func main() {
-
-    headers := map[string][]string{
-        "Accept": []string{"application/json"},
-        "UserID": []string{"API_KEY"},
-        "ApiKey": []string{"API_KEY"},
-    }
-
-    data := bytes.NewBuffer([]byte{jsonReq})
-    req, err := http.NewRequest("GET", "https://solar-rocket-fuel.benmanage.click/deliveries", data)
-    req.Header = headers
-
-    client := &http.Client{}
-    resp, err := client.Do(req)
-    // ...
-}
 
 ```
 
@@ -231,15 +104,6 @@ UserID & ApiKey
 
 > Code samples
 
-```shell
-# You can also use wget
-curl -X GET https://solar-rocket-fuel.benmanage.click/delivery/{date} \
-  -H 'Accept: application/json' \
-  -H 'UserID: API_KEY' \
-  -H 'ApiKey: API_KEY'
-
-```
-
 ```http
 GET https://solar-rocket-fuel.benmanage.click/delivery/{date} HTTP/1.1
 Host: solar-rocket-fuel.benmanage.click
@@ -266,115 +130,6 @@ fetch('https://solar-rocket-fuel.benmanage.click/delivery/{date}',
 }).then(function(body) {
     console.log(body);
 });
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Accept' => 'application/json',
-  'UserID' => 'API_KEY',
-  'ApiKey' => 'API_KEY'
-}
-
-result = RestClient.get 'https://solar-rocket-fuel.benmanage.click/delivery/{date}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-```python
-import requests
-headers = {
-  'Accept': 'application/json',
-  'UserID': 'API_KEY',
-  'ApiKey': 'API_KEY'
-}
-
-r = requests.get('https://solar-rocket-fuel.benmanage.click/delivery/{date}', headers = headers)
-
-print(r.json())
-
-```
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Accept' => 'application/json',
-    'UserID' => 'API_KEY',
-    'ApiKey' => 'API_KEY',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('GET','https://solar-rocket-fuel.benmanage.click/delivery/{date}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```java
-URL obj = new URL("https://solar-rocket-fuel.benmanage.click/delivery/{date}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-
-```
-
-```go
-package main
-
-import (
-       "bytes"
-       "net/http"
-)
-
-func main() {
-
-    headers := map[string][]string{
-        "Accept": []string{"application/json"},
-        "UserID": []string{"API_KEY"},
-        "ApiKey": []string{"API_KEY"},
-    }
-
-    data := bytes.NewBuffer([]byte{jsonReq})
-    req, err := http.NewRequest("GET", "https://solar-rocket-fuel.benmanage.click/delivery/{date}", data)
-    req.Header = headers
-
-    client := &http.Client{}
-    resp, err := client.Do(req)
-    // ...
-}
 
 ```
 
@@ -529,7 +284,3 @@ Array of dates (yyyy-mm-dd)
 |---|---|---|---|---|
 |error|string|true|none|A human readable error message|
 
-
-
-&nbsp;
-# Good Luck!
