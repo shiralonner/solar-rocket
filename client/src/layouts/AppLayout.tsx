@@ -23,7 +23,7 @@ import {
   Menu as MenuIcon,
   Home as HomeIcon,
   RocketLaunch as RocketLaunchIcon,
-  WbSunny as WbSunnyIcon,
+  LocalGasStation as LocalGasStationIcon,
   Settings as SettingsIcon,
 } from "@mui/icons-material";
 
@@ -146,7 +146,7 @@ const AppLayout: React.FC<pageProps> = ({ children, title }) => {
               icon: <RocketLaunchIcon />,
               link: "/missions",
             },
-            { text: "Weather", icon: <WbSunnyIcon />, link: "/weather" },
+            { text: "Fuel Deliveries", icon: <LocalGasStationIcon />, link: "/fuel-deliveries" },
             {
               text: "Preferences",
               icon: <SettingsIcon />,

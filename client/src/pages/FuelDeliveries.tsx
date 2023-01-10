@@ -1,14 +1,14 @@
 import { Container } from "@mui/material";
 import { AppLayout } from "../layouts/AppLayout";
 
-const Weather = (): JSX.Element => {
+const FuelDeliveries = (): JSX.Element => {
   return (
-    <AppLayout title="Weather">
+    <AppLayout title="Fuel Deliveries">
       <Container maxWidth="lg">
-        <div>Weather!</div>
+        <div>Fuel Deliveries!</div>
       </Container>
     </AppLayout>
   );
 };
 
-export { Weather };
+export { FuelDeliveries as FuelDeliveries };

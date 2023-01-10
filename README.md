@@ -1,6 +1,6 @@
 # 🚀 Solar Rocket (v1.0) 🚀
 
-## Welcome to the BenManage Solar Rocket developer assessment
+## Welcome to the BenManage Solar Rocket developer assessment!
 
 This is a simple project designed to not only test your React skills, but also to gauge your ability to learn and figure out new things. Don't worry if you encounter something you don't know. [Google](https://www.google.com/) is your friend 😊.
 
@@ -42,6 +42,3 @@ To fix the issue, try adding the following line to the `/client/.env`:
 ## Extra Credit (if you really want to impress us 😊)
 1. Add the ability for users to modify and delete missions.
 1. Add any other improvements that you think the mission page can use.
-
-&nbsp;
-# Good Luck!
