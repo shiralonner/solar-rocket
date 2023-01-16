@@ -113,7 +113,7 @@ const AppLayout: React.FC<pageProps> = ({ children, title }) => {
       <AppBar
         position="fixed"
         open={drawerOpen}
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{ zIndex: (theme: { zIndex: { drawer: number; }; }) => theme.zIndex.drawer + 1 }}
       >
         <Toolbar variant="dense">
           <IconButton edge="start" color="inherit" onClick={toggleDrawer}>

@@ -6,6 +6,7 @@
     "ts-watch": "tsc --watch",
     "ts-build": "tsc",
     "server-watch": "nodemon dist/server.js"
+  
   },
   "author": "",
   "license": "UNLICENSED",

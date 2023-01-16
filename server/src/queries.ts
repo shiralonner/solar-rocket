@@ -2,10 +2,15 @@ import { v4 as uuidv4 } from "uuid";
 import { createHash } from "crypto";
 import { Mission } from "./types";
 
+
+export const GetMissionById = (missions: Mission[], id: String) => {
+  return missions.find((mission: Mission) => mission.id === id);
+};
+
 export const ListMissions = (missions: Mission[], args: any) => {
   if (args.sort) {
     missions.sort((aMission: Mission, bMission: Mission) => {
-      let a: String | Date, b: String | Date;
+      let a: String | Date , b: String | Date;
       switch (args.sort?.field) {
         case "Title":
           a = aMission.title;
@@ -15,6 +20,9 @@ export const ListMissions = (missions: Mission[], args: any) => {
           a = new Date(aMission.launch.date);
           b = new Date(bMission.launch.date);
           break;
+        case "Operator":
+          a= aMission.operator;
+          b= bMission.operator;
         default:
           a = "";
           b = "";
@@ -29,9 +37,7 @@ export const ListMissions = (missions: Mission[], args: any) => {
   return missions;
 };
 
-export const GetMissionById = (missions: Mission[], id: String) => {
-  return missions.find((mission: Mission) => mission.id === id);
-};
+
 
 export const CreateMission = (mission: Mission): Mission => {
   mission.id = createHash("sha256")

@@ -6,6 +6,8 @@ const FuelDeliveries = (): JSX.Element => {
     <AppLayout title="Fuel Deliveries">
       <Container maxWidth="lg">
         <div>Fuel Deliveries!</div>
+        {/* לראות מה להוסיף */}
+        
       </Container>
     </AppLayout>
   );
